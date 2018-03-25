@@ -25,6 +25,7 @@
   </div>
 
   <main class="home">
+
     <div style="width: 60px;">
       <i><img  src="resource/house.jpeg" id="house" style="margin-left: 100px;"/></i>
     </div>
@@ -37,6 +38,19 @@
 
       <button id="voiceicon" class="voice" type="button" ><i><img  src="resource/voice.png" id="voice" width="20" height="20"/></i></button>
 
+    <form>
+      <div>
+      <input id="input" class="search" type="text" placeholder="Searching for .. ">
+      <span>
+        <form>
+          <a href="#" id="camicon" onclick="openwin()"><img  src="resource/camera.png" width="20" height="20"type="file"/></a>
+        </form>
+      </span>
+      <span>
+      <button id="voiceicon" class="voice" type="button" ><a href="chatbot.html"><i><img  src="resource/voice.png" id="voice" width="20" height="20"/></i></a></button>
+      </span>
+    </div>
+
       <div class="button-group">
         <button class="button button-default r-search" type="submit" id="searchButton" >
           Recipe Search
@@ -45,9 +59,11 @@
 
     </form>
 
-      <div id="recipes"></div>
+    </form>
 
   </main>
+
+      <div id="recipes"></div>
 
   <div class="footer">
     <ul>
