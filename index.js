@@ -1,26 +1,4 @@
-function show() {
-    var p = document.getElementById('pwd');
-    p.setAttribute('type', 'text');
-}
-
-function hide() {
-    var p = document.getElementById('pwd');
-    p.setAttribute('type', 'password');
-}
-
-var pwShown = 0;
-
-document.getElementById("eye").addEventListener("click", function () {
-    if (pwShown == 0) {
-        pwShown = 1;
-        show();
-    } else {
-        pwShown = 0;
-        hide();
-    }
-}, false);
-
-    function selectPhoto(){
+ function selectPhoto(){
         var photo = document.getElementById('photo').files[0];
         var imageType = /image.*/;
         if (!photo.type.match(imageType)) {
@@ -69,12 +47,25 @@ function selectPhotos() {
 
 function openwin() {
     OpenWindow = window.open("imageselect.html", "newwin", "height=250, width=250,toolbar=no ,scrollbars=" + scroll + ",menubar=no");
-    //写成一行
-    // OpenWindow.document.write("<TITLE>例子</TITLE>")
-    // OpenWindow.document.write("<BODY BGCOLOR=#ffffff>")
-    // OpenWindow.document.write("<h1>Hello!</h1>")
-    // OpenWindow.document.write("New window opened!")
-    // OpenWindow.document.write("</BODY>")
-    // OpenWindow.document.write("</HTML>")
     OpenWindow.document.close()
+}
+
+ function requestRecipe(ingre) {
+     var xhttp = new XMLHttpRequest();
+     xhttp.open('GET', 'http://192.168.1.104:1323/getrecipes1?ingr=' + ingre, true);
+     xhttp.setRequestHeader('Content-type', 'application/json');
+     xhttp.setRequestHeader('Access-Control-Allow-Origin', 'localhost');
+     xhttp.send();
+     return xhttp.responseText;
+}
+
+function search(searchBar) {
+    var inputValue = searchBar.value;
+    var ingre = inputValue.replace(' ', '+');
+
+    var ingreJson = JSON.parse(requestRecipe(ingre));
+    for (i = 0; i < ingreJson.length; i++){
+        var x = '<a href="${ingreJson[i].recipe.url}">' + ingreJson[i].recipe.Label + '</a>';
+        document.getElementById('recipes').appendChild(x);
+    }
 }

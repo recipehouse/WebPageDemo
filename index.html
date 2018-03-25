@@ -6,8 +6,8 @@
   <title>Recipe House</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="css/style.css">
-  <script  src="index.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+
 
 </head>
 
@@ -29,25 +29,24 @@
       <i><img  src="resource/house.jpeg" id="house" style="margin-left: 100px;"/></i>
     </div>
 
-    <form>
-      <div>
-      <input id="input" class="search" type="text" placeholder="Searching for .. ">
-      <span>
-        <form>
-          <a href="#" id="camicon" onclick="openwin()"><img  src="resource/camera.png" width="20" height="20"type="file"/></a>
-        </form>
-      </span>
-      <span>
+    <form id="searchForm" onsubmit="search(this.searchBar); return false">
+
+      <input id="input" name="searchBar" class="search" type="text" placeholder="Searching for .. ">
+
+      <a href="#" id="camicon" onclick="openwin()"><img  src="resource/camera.png" width="20" height="20"type="file"/></a>
+
       <button id="voiceicon" class="voice" type="button" ><i><img  src="resource/voice.png" id="voice" width="20" height="20"/></i></button>
-      </span>
-    </div>
+
       <div class="button-group">
-        <button class="button button-default r-search" type="submit">
+        <button class="button button-default r-search" type="submit" id="searchButton" >
           Recipe Search
         </button>
-
       </div>
+
     </form>
+
+      <div id="recipes"></div>
+
   </main>
 
   <div class="footer">
@@ -67,5 +66,7 @@
 
 
 </body>
+
+<script  src="index.js"></script>
 
 </html>
