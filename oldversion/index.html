@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+  <div class="fluid-container">
+
+  <div class="toolbar">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">DESIGN</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <main class="home">
+
+    <div style="width: 60px;">
+      <i><img  src="resource/house.jpeg" id="house" style="margin-left: 100px;"/></i>
+    </div>
+
+    <form id="searchForm" onsubmit="search(this.searchBar)">
+      <div>
+      <input id="input" class="search" type="text" placeholder="Searching for .. ">
+      <span>
+          <a href="#" id="camicon" onclick="openwin()"><img  src="resource/camera.png" width="20" height="20"type="file"/></a>
+      </span>
+      <span>
+      <button id="voiceicon" class="voice" type="button" ><a href="chatbot.html"><i><img  src="resource/voice.png" id="voice" width="20" height="20"/></i></a></button>
+      </span>
+    </div>
+
+      <div class="button-group">
+        <button class="button button-default r-search" type="submit" id="searchButton" >
+          Recipe Search
+        </button>
+      </div>
+    </form>
+  </main>
+
+
+  <div class="footer">
+    <ul>
+      <li><a href="#">Advertising</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+    </ul>
+  </div>
+
+</div>
+
+
+</body>
+
+<script  src="index.js"></script>
+
+</html>
