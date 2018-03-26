@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"strings"
 	"log"
-	"net/http"
 )
 
 type recipeinfo struct {
@@ -31,19 +30,16 @@ type App struct {
 	*revel.Controller
 }
 
-type MyHtml string
-
-func (r MyHtml) Apply(req *revel.Request, resp *revel.Response) {
-	resp.WriteHeader(http.StatusOK, "text/html")
-	resp.GetWriter().Write([]byte(r))
-}
 
 func (c App) Index() revel.Result {
-	greeting := "Welcome to Recipe House!!!"
-	return c.Render(greeting)
+	return c.Render()
 }
 
-func (c *App) SearchPage(ingres string) revel.Result  {
+func (c App) SearchPage(ingres string) revel.Result  {
+
+	if ingres == "" {
+		return c.Redirect(App.Index)
+	}
 
 	r, err := grequests.Get("Http://localhost:1323/getrecipes1?ingr=" + strings.Replace(ingres, " ", "+", -1), nil)
 
@@ -57,10 +53,11 @@ func (c *App) SearchPage(ingres string) revel.Result  {
 
 	var res string
 
+
 	for i := 0; i < len(ris.Hits); i++{
-		res += "<li>" +  "<a href=" + ris.Hits[i].Recipe.URL + ">" + ris.Hits[i].Recipe.Label + "</a>"  + "<li>"
+		res += "<li>" +  "<a href=" + ris.Hits[i].Recipe.URL + ">" + ris.Hits[i].Recipe.Label + "</a>"  + "</li>"
 	}
 
 
-	return MyHtml(res)
+	return c.Render(res)
 }

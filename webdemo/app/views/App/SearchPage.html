@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style media="screen">
+        #recipesList {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        #recipesList li a {
+          border: 1px solid #ddd;
+          margin-top: -1px; /* Prevent double borders */
+          background-color: #f6f6f6;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px;
+          color: black;
+          display: block
+        }
+
+        #recipesList li a:hover:not(.header) {
+          background-color: #eee;
+        }
+
+    </style>
+    
+    <title>SearchPage</title>
+</head>
+<body class="recipeResults">
+
+  <ul id="recipesList">
+    {{raw .res}}
+  </ul>
+
+</body>
+
+</html>
