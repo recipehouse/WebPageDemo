@@ -55,7 +55,7 @@ func (c App) SearchPage(ingres string) revel.Result  {
 
 
 	for i := 0; i < len(ris.Hits); i++{
-		res += "<li>" +  "<a href=" + ris.Hits[i].Recipe.URL + ">" + ris.Hits[i].Recipe.Label + "</a>"  + "</li>"
+		res += "<li>" +  "<a href=" + ris.Hits[i].Recipe.URL + ">" + "<img src=" + ris.Hits[i].Recipe.Image + ">" + ris.Hits[i].Recipe.Label + "</a>"  + "</li>"
 	}
 
 
