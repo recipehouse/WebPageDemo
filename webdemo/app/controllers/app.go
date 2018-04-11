@@ -58,6 +58,10 @@ func (c App) SearchPage(ingres string) revel.Result  {
 		res += "<li>" +  "<a href=" + ris.Hits[i].Recipe.URL + ">" + "<img src=" + ris.Hits[i].Recipe.Image + ">" + ris.Hits[i].Recipe.Label + "</a>"  + "</li>"
 	}
 
+	if len(ris.Hits) == 0 {
+		res = "Sorry, we could not find anything that matches! "
+	}
+
 
 	return c.Render(res)
 }
