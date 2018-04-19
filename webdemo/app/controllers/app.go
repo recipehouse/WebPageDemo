@@ -6,7 +6,30 @@ import (
 	"encoding/json"
 	"strings"
 	"log"
+
+	"bytes"
+  "image"
+  _ "image/jpeg"
+  _ "image/png"
+  "net/http"
+  "io/ioutil"
 )
+
+
+const (
+	_      = iota
+	KB int = 1 << (10 * iota)
+	MB
+	GB
+)
+
+type Predictions struct {
+	Predictions []struct {
+		TagID       string  `json:"TagId"`
+		Tag         string  `json:"Tag"`
+		Probability float64 `json:"Probability"`
+		} `json:"Predictions"`
+}
 
 type recipeinfo struct {
 	Hits []struct {
@@ -64,4 +87,79 @@ func (c App) SearchPage(ingres string) revel.Result  {
 
 
 	return c.Render(res)
+}
+
+
+
+func (c App) HandleUpload(avatar []byte) revel.Result {
+	// Validation rules.
+	c.Validation.Required(avatar)
+	c.Validation.MinSize(avatar, 2*KB).
+		Message("Minimum a file size of 2KB expected")
+	c.Validation.MaxSize(avatar, 2*MB).
+		Message("File cannot be larger than 2MB")
+
+	// Check format of the file.
+	conf, format, err := image.DecodeConfig(bytes.NewReader(avatar))
+	c.Validation.Required(err == nil).Key("avatar").
+		Message("Incorrect file format")
+	c.Validation.Required(format == "jpeg" || format == "png").Key("avatar").
+		Message("JPEG or PNG file format is expected")
+
+	// Check resolution.
+	c.Validation.Required(conf.Height >= 150 && conf.Width >= 150).Key("avatar").
+		Message("Minimum allowed resolution is 150x150px")
+
+	// Handle errors.
+	if c.Validation.HasErrors() {
+		c.Validation.Keep()
+		c.FlashParams()
+		return c.Redirect(App.Index)
+	}
+
+	ingres := vision(avatar)
+
+    return c.Redirect("/App/SearchPage?ingres=%s", ingres)
+
+}
+
+
+
+func vision(file []byte) string {
+
+
+
+	   const url string = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.1/Prediction/f061cd19-ac4b-4f8f-8c41-6d741f73269a/image"
+
+	   // This will upload the file as a multipart mime request
+	   req, err := http.NewRequest("POST", url, bytes.NewBuffer(file))
+
+	   req.Header.Set("Content-Type", "application/octet-stream")
+	   req.Header.Set("Prediction-Key", "baa90e086a9d477e80a9758502f5f383")
+
+	   client := &http.Client{}
+
+	   resp, err := client.Do(req)
+	   defer resp.Body.Close()
+
+	   if err != nil {
+	   	   log.Println("Unable to make request", err)
+	   }
+
+	   log.Println(resp.Status)
+
+	   body, _ := ioutil.ReadAll(resp.Body)
+
+	   var predicts Predictions
+		 json.Unmarshal(body, &predicts)
+
+		 var res string
+		 for i := 0; i < 4 /* len(predicts.Predictions) */; i++{
+	 		res += predicts.Predictions[i].Tag + " "
+	 	}
+
+		log.Println(res)
+
+        return res
+
 }
