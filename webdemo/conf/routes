@@ -12,6 +12,8 @@ GET     /App/SearchPage                         App.SearchPage
 POST    /App/SearchPage                         App.SearchPage
 POST    /App/HandleUpload                       App.HandleUpload
 
+GET     /App/Chatbot                         App.Chatbot
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

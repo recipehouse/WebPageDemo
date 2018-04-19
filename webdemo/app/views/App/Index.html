@@ -2,26 +2,26 @@
 {{template "header.html" .}}
 
 <!-- <header class="jumbotron" style="background-color:#A9F16C">
-  <div class="container">
-    <div class="row">
-      <h1>{{.greeting}}</h1>
-      <p></p>
-    </div>
-  </div>
+<div class="container">
+<div class="row">
+<h1>{{.greeting}}</h1>
+<p></p>
+</div>
+</div>
 </header> -->
 
 <header>
   <!-- <div class="container">
-    <div class="row">
-      <h1>{{.greeting}}</h1>
-      <p></p>
-    </div>
-  </div> -->
+  <div class="row">
+  <h1>{{.greeting}}</h1>
+  <p></p>
+</div>
+</div> -->
 </header>
 
 <body>
 
-  <div class="fluid-container">
+  <!-- <div class="fluid-container"> -->
 
   <div class="toolbar">
     <ul>
@@ -31,74 +31,127 @@
     </ul>
   </div>
 
-<main class="home">
+  <main class="home">
 
-  <div style="width: 60px;">
+    <div style="width: 60px;">
       <i><img  src="/public/img/house.jpeg" id="house" style="margin-left: 100px;"/></i>
-  </div>
+    </div>
 
-  <form id="searchForm" action="/App/SearchPage" method="get">
+    <form id="searchForm" action="/App/SearchPage" method="get">
       <input id="input" name="ingres" class="search" type="text" placeholder="Searching for .. ">
 
-      <a href="#" id="camicon" onclick="openwin()"><img  src="/public/img/camera.png" width="20" height="20"type="file"/></a>
-       <button id="voiceicon" class="voice" type="button" >
-         <a href="chatbot.html">
-           <i><img  src="/public/img/voice.png" id="voice" width="20" height="20"/></i>
-         </a>
-       </button>
 
       <div class="button-group">
         <button class="button button-default r-search" type="submit" id="searchButton" >
           Recipe Search
         </button>
       </div>
-  </form>
+    </form>
 
-  <!-- this part needs to be changed but it works for now -->
 
-  <div class="container">
-  	<div class="row">
-  		<div class="span6">
-  			<form method="post" action="/App/HandleUpload" enctype="multipart/form-data">
-  				<p>
-  					<label for="pic"><strong>Picture*:</strong></label>
-  					<input type="file" name="pic" id="pic" class="span6">
-  				</p>
-  				<hr>
-  				<input type="submit" value="Upload" class="btn btn-large btn-success">
-  			</form>
-  		</div>
-  		<div class="span6">
-  			<i>
-  				Your picture is expected to be in PNG or JPEG format.
-  				Minimum allowed resolution is 150x150px.
-  				Maximum file size is 2 MB.
-  			</i>
-  		</div>
-  	</div>
+
+    <!-- <div class="htmleaf-container"> -->
+
+    <!-- <button class="tc"><img src="public/img/camera.png" class="camera"></button>
+    <div id="gray"></div> -->
+    <!-- <div class="popup" id="popup">
+    <div class="top_nav" id='top_nav'>
+    <div align="center">
+    <span>Images Upload</span>
+    <a class="guanbi"></a>
   </div>
+</div>
+<div class="min">
+<span>
+<fieldset>
+<legend>Single File</legend>
+<form>
+<input type="file" id="photo" onchange="selectPhoto()"/>
+<br>
+<div id="result1"></div>
+<div id="resultPreview1"></div>
+<br>
+</form>
+</fieldset>
 
-  <!-- this part needs to be changed but it works for now -->
+<fieldset>
+<div style="margin:0 auto;width:200px;">
+<input class="submit" id="btn" type="submit" value="upload" />
+</div>
+</fieldset>
+</span>
+</div>
+</div> -->
+
+<!-- </div> -->
+
+  <a href="/App/Chatbot"><img  src="/public/img/voice.png" id="voice" class="chatbotButton"/></a>
 
 
+
+<!-- this part needs to be changed but it works for now -->
+<button id="button" style="margin-left:300px; margin-top:0%;"><img src="public/img/camera.png" class="camera"></button>
+<div id="overlay"></div>
+<div id="popup">
+  <div class="popupcontrols">
+    <span id="popupclose">X</span>
+  </div>
+  <div class="popupcontent">
+    <form class="form" method="post" action="/App/HandleUpload" enctype="multipart/form-data">
+      <p>
+        <label for="pic"><strong>Picture*:</strong></label>
+        <input type="file" name="pic" id="pic" class="span6">
+      </p>
+      <hr>
+      <input type="submit" value="Upload" class="btn btn-large btn-success">
+    </form>
+
+  </div>
+</div>
+
+<!-- <div class="container">
+<div class="row">
+<div class="span6">
+<form class="form" method="post" action="/App/HandleUpload" enctype="multipart/form-data">
+<p>
+<label for="pic"><strong>Picture*:</strong></label>
+<input type="file" name="pic" id="pic" class="span6">
+</p>
+<hr>
+<input type="submit" value="Upload" class="btn btn-large btn-success">
+</form>
+</div>
+<div class="span6">
+<i>
+Your picture is expected to be in PNG or JPEG format.
+Minimum allowed resolution is 150x150px.
+Maximum file size is 2 MB.
+</i>
+</div>
+</div>
+</div> -->
+
+<!-- this part needs to be changed but it works for now -->
+
+<script src="/public/js/index.js"></script>
 
 </main>
 
-  <div class="footer">
-    <ul>
-      <li><a href="#">Advertising</a></li>
-      <li><a href="#">Business</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Settings</a></li>
-      <li><a href="#">Terms</a></li>
-      <li><a href="#">Privacy</a></li>
-    </ul>
-  </div>
-
-
+<div class="footer">
+  <ul>
+    <li><a href="#">Advertising</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <ul>
+    <li><a href="#">Settings</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
 </div>
+
+
+<!-- </div> -->
 
 </body>
 

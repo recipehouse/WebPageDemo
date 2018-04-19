@@ -166,3 +166,9 @@ func vision(file []byte) string {
         return res
 
 }
+
+
+
+func (c App) Chatbot() revel.Result {
+	return c.Render(App.Chatbot)
+}
