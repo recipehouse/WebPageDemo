@@ -156,6 +156,9 @@ func vision(file []byte) string {
 		 var res string
 		 for i := 0; i < 4 /* len(predicts.Predictions) */; i++{
 	 		res += predicts.Predictions[i].Tag + " "
+			if predicts.Predictions[i].Probability > 0.4{
+				break
+			}
 	 	}
 
 		log.Println(res)
