@@ -91,23 +91,23 @@ func (c App) SearchPage(ingres string) revel.Result  {
 
 
 
-func (c App) HandleUpload(avatar []byte) revel.Result {
+func (c App) HandleUpload(pic []byte) revel.Result {
 	// Validation rules.
-	c.Validation.Required(avatar)
-	c.Validation.MinSize(avatar, 2*KB).
+	c.Validation.Required(pic)
+	c.Validation.MinSize(pic, 2*KB).
 		Message("Minimum a file size of 2KB expected")
-	c.Validation.MaxSize(avatar, 2*MB).
+	c.Validation.MaxSize(pic, 2*MB).
 		Message("File cannot be larger than 2MB")
 
 	// Check format of the file.
-	conf, format, err := image.DecodeConfig(bytes.NewReader(avatar))
-	c.Validation.Required(err == nil).Key("avatar").
+	conf, format, err := image.DecodeConfig(bytes.NewReader(pic))
+	c.Validation.Required(err == nil).Key("pic").
 		Message("Incorrect file format")
-	c.Validation.Required(format == "jpeg" || format == "png").Key("avatar").
+	c.Validation.Required(format == "jpeg" || format == "png").Key("pic").
 		Message("JPEG or PNG file format is expected")
 
 	// Check resolution.
-	c.Validation.Required(conf.Height >= 150 && conf.Width >= 150).Key("avatar").
+	c.Validation.Required(conf.Height >= 150 && conf.Width >= 150).Key("pic").
 		Message("Minimum allowed resolution is 150x150px")
 
 	// Handle errors.
@@ -117,7 +117,7 @@ func (c App) HandleUpload(avatar []byte) revel.Result {
 		return c.Redirect(App.Index)
 	}
 
-	ingres := vision(avatar)
+	ingres := vision(pic)
 
     return c.Redirect("/App/SearchPage?ingres=%s", ingres)
 
