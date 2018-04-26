@@ -18,9 +18,12 @@ This instruction is based on CentOS 7
 
 
 first make sure golang is installed currectly
+to install, exec `sudo yum install go`
+to check if go is ready exec `go version`
+
 set the GOPATH correctly by exec `export GOPATH=/home/<your username>/gocode`
 
-then get the dependencies
+then get the dependencies by exec the following command sequencially
 
 
 `go get -u github.com/levigross/grequests`
@@ -31,18 +34,22 @@ then get the dependencies
 
 `go get github.com/revel/cmd/revel`
 
+## Compile the api
 
-recipehouse api can be compiled by exec 
-`go build main.go`
-and exec that generated binary file in BACKGROUND
+recipehouse api can be compiled by first change the directory to the folder that contains api source code
+then exec `go build main.go`
+and then exec that generated binary file in BACKGROUND
 
-recipehouse web
+## Compile the webdemo
+
 first need to install revel correctly
-then put the whole folder which contains recipehouse web sorce code in GOAPTH/src file
+
+then put the whole folder which contains the webdemo source code in GOAPTH/src file
 
 then exec `export PATH="$PATH:$GOPATH/bin"`
 
-and `cd GOPATH/src/recipehouse web folder` then exec `revel run` 
+and change the directory to the folder that contains webdemo source code in GOPATH/src 
+then exec `revel run` 
 
 and now you should have access to recipehouse service via browser : 127.0.0.1:9000
 
@@ -52,13 +59,13 @@ and now you should have access to recipehouse service via browser : 127.0.0.1:90
 two parts for the whole project
 
 recipehouse api 
-    dependencies:
-        grequests
-        echo
+- dependencies:
+	 grequests
+         echo
 
 
-recipehouse web
-    dependencies:
+webdemo
+- dependencies:
         grequests
         revel
 
