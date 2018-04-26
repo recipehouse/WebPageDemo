@@ -16,9 +16,9 @@
 
 
 	< !--Custom-Theme-files-->
-	<link href="css/home.css" rel='stylesheet' type='text/css' />	
-		<link href="css/component.css" rel='stylesheet' type='text/css' />
-		<link href="css/nav.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />	
+		<link href="css/component.css" rel='stylesheet' type='text/css' />	
+		<link href="css/nav.css" rel='stylesheet' type='text/css' />	
 
 	<script src="js/jquery.min.js"> </script>
 <!--/script-->
@@ -30,7 +30,7 @@
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){
+				$(".scroll").click(function(event){		
 					event.preventDefault();
 					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
 				});
@@ -87,11 +87,11 @@
 
 
 		<ul class="side_nav">
-			<li><a href="index.html" class="active"><span>Home</span></a></li>
+			<li><a href="home.html" class="active"><span>Home</span></a></li>
 			<!--<li><a href=""><span>Setting</span></a></li>-->
 			<!--<li><a href=""><span>video</span></a></li>-->
-			<li><a href=""><span>Setting</span></a></li>
-			<li><a href=""><span>Find your recipe</span></a></li>
+			<li><a href="#services"><span>Services</span></a></li>
+			<li><a href="http://webdemo.recipehouse.tk"><span>Find your recipe</span></a></li>
 		</ul>
 
 		<span aria-hidden="true" class="stretchy-nav-bg"></span>
@@ -101,11 +101,8 @@
 			<div class="content">
                 <div id="large-header" class="large-header">
                     <canvas id="demo-canvas"></canvas>
-                    <h1 class="main-title"><a class="link link--takiri" href="index.html">Recipe House<span class="wow fadeInUp animated animated" data-wow-delay=".5s">What to eat today?</span></a></h1>
-
-
+                    <h1 class="main-title"><a class="link link--takiri" href="home.html">Recipe House<span class="wow fadeInUp animated animated" data-wow-delay=".5s">What to eat today?</span></a></h1>
                 </div>
-
             </div>
  </div>
 
@@ -123,60 +120,60 @@
 									<h3>Cam<span>era</span></h3>
 									<p>Use images for searching.</p>
 									<a href="#">View more</a>
-								</figcaption>
+								</figcaption>			
 							</figure>
-
+							
 						</div>
-						<div class="bnr-btm-right">
+						<div class="bnr-btm-right">				
 							<h3>Image recognition</h3>
-							<p>Introduce</p>
-							<a href="http://huaban.com" class="buy btn-wayra">Read More</a>
+							<p></p>
+							<a href="http://webdemo.recipehouse.tk" class="buy btn-wayra">Find your recipe</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
 
 					<!--voice-->
 					 <div class="top_section two">
-					 	<div class="bnr-btm-right two">
-							<h3>Voice recognition</h3>
+					 	<div class="bnr-btm-right two">				
+							<h3>Text search</h3>
 							<p></p>
-							<a href="http://huaban.com" class="buy btn-wayra">Read More</a>
+							<a href="http://webdemo.recipehouse.tk" class="buy btn-wayra">Find your recipe</a>
 						</div>
 				       <div class="bnr-btm-left two grid">
 							<figure class="effect-ming wow fadeInRight animated animated" data-wow-delay=".5s">
 								<img src="images/2.jpg" alt="img09"/>
 								<figcaption>
-									<h3>Voi<span>ce</span></h3>
-									<p>Available for voice searching.</p>
+									<h3>Let<span>ters</span></h3>
+									<p>Available for normal searching.</p>
 									<a href="#">View more</a>
-								</figcaption>
+								</figcaption>			
 							</figure>
-
+							
 						</div>
-
+					
 						<div class="clearfix"></div>
 					</div>
 
-					<!--letters-->
-					<div class="top_section">
-						<div class="bnr-btm-left grid">
-							<figure class="effect-ming wow fadeInLeft animated animated" data-wow-delay=".5s">
-								<img src="images/1.jpg" alt="img09"/>
-								<figcaption>
-									<h3>let<span>ter</span></h3>
-									<p>Still can do normal searching.</p>
-									<a href="#">View more</a>
-								</figcaption>
-							</figure>
+					<!--&lt;!&ndash;letters&ndash;&gt;-->
+					<!--<div class="top_section">-->
+						<!--<div class="bnr-btm-left grid">-->
+							<!--<figure class="effect-ming wow fadeInLeft animated animated" data-wow-delay=".5s">-->
+								<!--<img src="images/1.jpg" alt="img09"/>-->
+								<!--<figcaption>-->
+									<!--<h3>let<span>ter</span></h3>-->
+									<!--<p>Still can do normal searching.</p>-->
+									<!--<a href="#">View more</a>-->
+								<!--</figcaption>-->
+							<!--</figure>-->
 
-						</div>
-						<div class="bnr-btm-right">
-							<h3>Text search</h3>
-							<p>Introduce.</p>
-							<a href="http://huaban.com" class="buy btn-wayra">Read More</a>
-						</div>
-						<div class="clearfix"></div>
-					</div>
+						<!--</div>-->
+						<!--<div class="bnr-btm-right">-->
+							<!--<h3>Voice recognition</h3>-->
+							<!--<p>Introduce.</p>-->
+							<!--<a href="http://huaban.com" class="buy btn-wayra">Read More</a>-->
+						<!--</div>-->
+						<!--<div class="clearfix"></div>-->
+					<!--</div>-->
 					<!--//end-top_section-->
 				</div>
 		  </div>
@@ -192,30 +189,30 @@
            <div class="col-md-3 staff2">
         	<div class="view view-fifth wow fadeInLeft animated animated" data-wow-delay=".5s">
                 <div class="mask1"><img src="images/t2.jpg" alt="image" class="img-responsive zoom-img" /></div>
-        	  <h3><a href="#">Jackey </a></h3>
-        	      <p>hahahaha.</p>
-			</div>
+        	  <h3><a href="#">Junsong Yang</a></h3>
+        	      <p>BSc computer science, second year, University of Nottingham</p>
+		   </div>
            </div>
         <div class="col-md-3 staff2">
         	<div class="view view-fifth wow fadeInUp animated animated" data-wow-delay=".5s">
                 <div class="mask1"><img src="images/t1.jpg" alt="image" class="img-responsive zoom-img" /></div>
-        	 <h3><a href="#">James </a></h3>
-        	      <p>hahahaha.</p>
+        	 <h3><a href="#">Chaoqun Zhang</a></h3>
+        	      <p>BSc computer science and artificial intelligence, second year, University of Nottingham</p>
           </div>
         </div>
 		   <div class="col-md-3 staff2">
         	<div class="view view-fifth wow fadeInRight animated animated" data-wow-delay=".5s">
                 <div class="mask1"><img src="images/t3.jpg" alt="image" class="img-responsive zoom-img" /></div>
-        	       <h3><a href="#">Lily</a></h3>
-        	      <p>hahahaha.</p>
+        	       <h3><a href="#">Luou Wen</a></h3>
+        	      <p>BSc computer science, second year, University of Nottingham</p>
 				</div>
 				</div>
 
         <div class="col-md-3 staff2">
         	<div class="view view-fifth wow fadeInRight animated animated" data-wow-delay=".5s">
                 <div class="mask1"><img src="images/t4.jpg" alt="image" class="img-responsive zoom-img" /></div>
-        	       <h3><a href="#">Stefanie</a></h3>
-        	      <p>ahhahahahah.</p>
+        	       <h3><a href="#">Yanting SHEN</a></h3>
+        	      <p>BSc computer science and artificial intelligence, second year, University of Nottingham</p>
 				</div>
 				</div>
 			<div class="clearfix"></div>
@@ -258,35 +255,35 @@
 		</div>
 		<!--//iframe-->
 	</div>
-	<div class="testimonials module">
-		<div class="container">
-			<!-- TITLE -->
-			<div class="test-top">
-				<div class="sp-testimonials-title">
+	<!--<div class="testimonials module">-->
+		<!--<div class="container">-->
+			<!--&lt;!&ndash; TITLE &ndash;&gt;-->
+			<!--<div class="test-top">-->
+				<!--<div class="sp-testimonials-title">-->
 
-					<h3 class=" tittle wow fadeInUp" data-wow-delay="1s" data-wow-duration="0.5s">Our Plan</h3>
+					<!--<h3 class=" tittle wow fadeInUp" data-wow-delay="1s" data-wow-duration="0.5s">Our Plan</h3>-->
 
-				</div>
-				<div class="sp-testimonials">
-					<div class="sp">
-						<div class="col-md-6 pic wow fadeInLeft animated animated" data-wow-delay=".5s">
-							<blockquote>APP.</blockquote>
-							<img src="images/t4.jpg" alt="">
-							<p>APP</p>
-						</div>
-						<div class="col-md-6 pic wow fadeInRight animated animated" data-wow-delay=".5s">
-							<blockquote>Website.</blockquote>
-							<img src="images/t1.jpg" alt="">
-							<p>Website</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			</div>
-			<!-- /TITLE -->
-		</div>
-	</div>
-	<!-- /TESTIMONIALS -->
+				<!--</div>-->
+				<!--<div class="sp-testimonials">-->
+					<!--<div class="sp">-->
+						<!--<div class="col-md-6 pic wow fadeInLeft animated animated" data-wow-delay=".5s">-->
+							<!--<blockquote>APP.</blockquote>-->
+							<!--<img src="images/t4.jpg" alt="">-->
+							<!--<p>APP</p>-->
+						<!--</div>-->
+						<!--<div class="col-md-6 pic wow fadeInRight animated animated" data-wow-delay=".5s">-->
+							<!--<blockquote>Website.</blockquote>-->
+							<!--<img src="images/t1.jpg" alt="">-->
+							<!--<p>Website</p>-->
+						<!--</div>-->
+						<!--<div class="clearfix"> </div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--&lt;!&ndash; /TITLE &ndash;&gt;-->
+		<!--</div>-->
+	<!--</div>-->
+	<!--&lt;!&ndash; /TESTIMONIALS &ndash;&gt;-->
 
 
 
@@ -307,10 +304,10 @@
 
 					<img src="images/p1.jpg" alt="img25" class="img-responsive"/>
 						<figcaption>
-							<h4>Topic</h4>
-							<p> Information.</p>
+							<h4>Recipe House Logo</h4>
+							<p> Our logo designed by YantingSHEN, not available on other place.</p>
 						</figcaption>
-					</a>
+					</a>						
 				</figure>
 			</div>
 			<div class="col-md-4 grid slideanim wow fadeInUp animated animated animated" data-wow-delay=".5s">
@@ -319,10 +316,10 @@
 
 					<img src="images/p2.jpg" alt="img25" class="img-responsive"/>
 						<figcaption>
-							<h4>Topic</h4>
-							<p> Information.</p>
-						</figcaption>
-						</a>
+							<h4>Recipe House APP Design</h4>
+							<p> It's Recipe House excepted APP design for our future plan.</p>
+						</figcaption>	
+						</a>						
 				</figure>
 			</div>
 			<div class="col-md-4 grid slideanim wow fadeInRight animated animated" data-wow-delay=".5s">
@@ -331,13 +328,13 @@
 
 					<img src="images/p3.jpg" alt="img25" class="img-responsive"/>
 						<figcaption>
-							<h4>Topic</h4>
-						<p> Information.</p>
+							<h4>APP Design expectation</h4>
+						<p> Test with Huawei Phone</p>
 						</figcaption>
-					</a>
+					</a>						
 				</figure>
 			</div>
-
+			
 			<div class="clearfix"></div>
 		 </div>
 		  <div class="portfolio-top">
@@ -347,8 +344,8 @@
 
 					<img src="images/p4.jpg" alt="img25" class="img-responsive"/>
 						<figcaption>
-							<h4 class="effcet-text">Topic</h4>
-					<p> Information.</p>
+							<h4 class="effcet-text">Hot Foods</h4>
+					<p> .</p>
 						</figcaption>
 					</a>
 				</figure>
@@ -359,8 +356,8 @@
 
 					<img src="images/p5.jpg" alt="img25" class="img-responsive"/>
 						<figcaption>
-							<h4 class="effcet-text">Topic</h4>
-						<p> Information.</p>
+							<h4 class="effcet-text">Sweets</h4>
+						<p> .</p>
 						</figcaption>
 						</a>
 				</figure>
@@ -371,8 +368,8 @@
 
 					<img src="images/p6.jpg" alt="img25" class="img-responsive"/>
 						<figcaption>
-							<h4 class="effcet-text">Topic</h4>
-							<p> Information.</p>
+							<h4 class="effcet-text">Drink</h4>
+							<p> .</p>
 						</figcaption>
 					</a>
 				</figure>
@@ -384,133 +381,133 @@
  <!--//portfolio-->
 
 
-<!-- Portfolio Modals -->
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
+<!--&lt;!&ndash; Portfolio Modals &ndash;&gt;-->
+<!--<div class="portfolio-modal modal fade slideanim" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">-->
+    <!--<div class="modal-content">-->
+        <!--<div class="close-modal" data-dismiss="modal">-->
+            <!--<div class="lr">-->
+                <!--<div class="rl"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+		<!---->
+                <!--<div class="col-lg-8 col-lg-offset-2">-->
+                    <!--<div class="modal-body">-->
+                        <!--<h3>Topic</h3>-->
+						<!---->
+                        <!--<img src="images/p1.jpg" class="img-responsive" alt="">-->
+                        <!--<p>Information.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+           <!---->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="portfolio-modal modal fade slideanim" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">-->
+    <!--<div class="modal-content">-->
+        <!--<div class="close-modal" data-dismiss="modal">-->
+            <!--<div class="lr">-->
+                <!--<div class="rl"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+         <!---->
+                <!--<div class="col-lg-8 col-lg-offset-2">-->
+                    <!--<div class="modal-body">-->
+                        <!--<h3>Topic</h3>-->
+                      <!---->
+                        <!--<img src="images/p2.jpg" class="img-responsive" alt="">-->
+                        <!--<p>Information.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+           <!---->
+        <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+<!--<div class="portfolio-modal modal fade slideanim" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">-->
+    <!--<div class="modal-content">-->
+        <!--<div class="close-modal" data-dismiss="modal">-->
+            <!--<div class="lr">-->
+                <!--<div class="rl"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+           <!---->
+                <!--<div class="col-lg-8 col-lg-offset-2">-->
+                    <!--<div class="modal-body">-->
+                        <!--<h3>Topic</h3>-->
+                     <!---->
+                        <!--<img src="images/p3.jpg" class="img-responsive" alt="">-->
+						<!--<p> Information.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+       <!---->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="portfolio-modal modal fade slideanim" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">-->
+    <!--<div class="modal-content">-->
+        <!--<div class="close-modal" data-dismiss="modal">-->
+            <!--<div class="lr">-->
+                <!--<div class="rl"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+			<!---->
+                <!--<div class="col-lg-8 col-lg-offset-2">-->
+                    <!--<div class="modal-body">-->
+                        <!--<h3>Topic</h3>-->
+                       <!---->
+                        <!--<img src="images/p4.jpg" class="img-responsive" alt="">-->
+                        <!--<p>Information.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="portfolio-modal modal fade slideanim" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">-->
+	<!--<div class="modal-content">-->
+        <!--<div class="close-modal" data-dismiss="modal">-->
+            <!--<div class="lr">-->
+                <!--<div class="rl"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
 
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Topic</h3>
-
-                        <img src="images/p1.jpg" class="img-responsive" alt="">
-                        <p>Information.</p>
-                    </div>
-                </div>
-
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Topic</h3>
-
-                        <img src="images/p2.jpg" class="img-responsive" alt="">
-                        <p>Information.</p>
-                    </div>
-                </div>
-
-        </div>
-    </div>
-    </div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Topic</h3>
-
-                        <img src="images/p3.jpg" class="img-responsive" alt="">
-						<p> Information.</p>
-                    </div>
-                </div>
-            </div>
-
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Topic</h3>
-
-                        <img src="images/p4.jpg" class="img-responsive" alt="">
-                        <p>Information.</p>
-                    </div>
-                </div>
-
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                         <h3>Topic</h3>
-
-                        <img src="images/p5.jpg" class="img-responsive" alt="">
-                        <p>Information.</p>
-                    </div>
-                </div>
-
-        </div>
-    </div>
-</div>
-<div class="portfolio-modal modal fade slideanim" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl"></div>
-            </div>
-        </div>
-        <div class="container">
-
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h3>Topic</h3>
-
-                        <img src="images/p6.jpg" class="img-responsive" alt="">
-                        <p>Information.</p>
-                    </div>
-                </div>
-            </div>
-
-    </div>
-</div>
+                <!--<div class="col-lg-8 col-lg-offset-2">-->
+                    <!--<div class="modal-body">-->
+                         <!--<h3>Topic</h3>-->
+                       <!---->
+                        <!--<img src="images/p5.jpg" class="img-responsive" alt="">-->
+                        <!--<p>Information.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+           <!---->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="portfolio-modal modal fade slideanim" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">-->
+    <!--<div class="modal-content">-->
+        <!--<div class="close-modal" data-dismiss="modal">-->
+            <!--<div class="lr">-->
+                <!--<div class="rl"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+           <!---->
+                <!--<div class="col-lg-8 col-lg-offset-2">-->
+                    <!--<div class="modal-body">-->
+                        <!--<h3>Topic</h3>-->
+                       <!---->
+                        <!--<img src="images/p6.jpg" class="img-responsive" alt="">-->
+                        <!--<p>Information.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!---->
+    <!--</div>-->
+<!--</div>-->
 
 
 
@@ -528,10 +525,14 @@
 									NG8 1BB<br>
 								  <abbr title="Phone">Phone :</abbr> 0115 951 4251 (department phone)
 								</address>
-								<!--<address>-->
-								  <!--<strong class="one">Our mail</strong><br>-->
-								  <!--<a href="mailto:info@example.com">...@...</a>-->
-							   <!--</address>-->
+								<address>
+								  <strong class="one">Our mails</strong><br>
+								  <a href="askmryang@outlook.com">askmryang@outlook.com (Junsong)</a>
+									<a href="james59427@gmail.com">james59427@gmail.com (Chaoqun)</a>
+									<a href="luouwen97@gmail.com">luouwen97@gmail.com (Luou)</a>
+									<a href="syt545676986@gmail.com">syt545676986@gmail.com (Yanting)</a>
+
+							   </address>
 						  </div>
 					</div>
 

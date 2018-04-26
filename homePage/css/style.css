@@ -165,11 +165,11 @@ h1.main-title a:hover{
 }
 a.buy {
    font-size: 1.5em;
-      color: #FF9966;
+      color: #d5a372;
     padding: 0.7em 2em;
     margin: 2em auto 0;
     text-align: center;
-       border: 2px solid #FF9966;
+       border: 2px solid #d5a372;
     position: relative;
     z-index: 1;
     -webkit-backface-visibility: hidden;
@@ -944,7 +944,7 @@ h3.tittle,h2.tittle.find {
     text-align: center;
 }
 .adrs-middle {
-      background: #FF9966;
+      background: #d5a372;
 }
 .adrs-left p {
     display: inline-block;
@@ -1046,7 +1046,7 @@ h1.title a{
     margin: 0 21px 20px;
     padding: 20px;
     color: #fff;
-    background-color:#FF9966;
+    background-color:#d5a372;
     line-height: 1.8em;
 }
 .sp-testimonials > div p strong {
