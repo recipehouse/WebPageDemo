@@ -8,6 +8,8 @@ This web interface using revel framework to achieve that functionalities
 
 # Instructions of set up
 
+This instruction is based on CentOS 7
+
 ## Denpendencies
 
 	- grequests
