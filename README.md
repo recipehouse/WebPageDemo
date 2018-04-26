@@ -6,6 +6,8 @@ This repo contians source code of web interface of recipehouse services
 
 This web interface using revel framework to achieve that functionalities
 
+## A working demo can br accessed via http://webdemo.recipehouse.tk
+
 # Instructions of set up
 
 This instruction is based on CentOS 7
