@@ -19,8 +19,8 @@ first make sure golang is installed currectly <br>
 
 ### Set the GOPATH
 
-1. Make a directory: mkdir ~/gocode
-2. Tell Go to use that as your GOPATH: export GOPATH=~/gocode
+1. Make a directory: `mkdir ~/gocode`
+2. Tell Go to use that as your GOPATH: `export GOPATH=~/gocode`
 
 
 ### Install Denpendencies
@@ -58,17 +58,11 @@ and then execute that generated binary file in BACKGROUND
 
 ## Compile the webdemo
 
-1. Check if revel is installed correctly by executing
-<br>
-`revel version`
+1. Check if revel is installed correctly by executing `revel version`
 
-2. then put the whole folder which contains the webdemo source code in GOAPTH/src file
-<br>
-`mv webdemo $GOPATH/src`
+2. then put the whole folder which contains the webdemo source code in GOAPTH/src file `mv webdemo $GOPATH/src`
 
-3. and change the directory to the folder that contains webdemo source code in GOPATH/src
-<br>
-`cd $GOPATH/src/webdemo`
+3. and change the directory to the folder that contains webdemo source code in GOPATH/src `cd $GOPATH/src/webdemo`
 
 4. then execute `revel run`
 
