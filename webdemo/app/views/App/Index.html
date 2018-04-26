@@ -1,27 +1,11 @@
 {{set . "title" "Home"}}
 {{template "header.html" .}}
 
-<!-- <header class="jumbotron" style="background-color:#A9F16C">
-<div class="container">
-<div class="row">
-<h1>{{.greeting}}</h1>
-<p></p>
-</div>
-</div>
-</header> -->
-
 <header>
-  <!-- <div class="container">
-  <div class="row">
-  <h1>{{.greeting}}</h1>
-  <p></p>
-</div>
-</div> -->
+
 </header>
 
 <body>
-
-  <!-- <div class="fluid-container"> -->
 
   <div class="toolbar">
     <ul>
@@ -40,57 +24,21 @@
     <form id="searchForm" action="/App/SearchPage" method="get">
       <input id="input" name="ingres" class="search" type="text" placeholder="Searching for .. ">
 
-
-      <div class="button-group">
-        <button class="button button-default r-search" type="submit" id="searchButton" >
-          Recipe Search
-        </button>
-      </div>
-    </form>
-
-
-
-    <!-- <div class="htmleaf-container"> -->
-
-    <!-- <button class="tc"><img src="public/img/camera.png" class="camera"></button>
-    <div id="gray"></div> -->
-    <!-- <div class="popup" id="popup">
-    <div class="top_nav" id='top_nav'>
-    <div align="center">
-    <span>Images Upload</span>
-    <a class="guanbi"></a>
-  </div>
-</div>
-<div class="min">
-<span>
-<fieldset>
-<legend>Single File</legend>
-<form>
-<input type="file" id="photo" onchange="selectPhoto()"/>
-<br>
-<div id="result1"></div>
-<div id="resultPreview1"></div>
-<br>
-</form>
-</fieldset>
-
-<fieldset>
-<div style="margin:0 auto;width:200px;">
-<input class="submit" id="btn" type="submit" value="upload" />
-</div>
-</fieldset>
-</span>
-</div>
-</div> -->
-
-<!-- </div> -->
-
   <a href="/App/Chatbot"><img  src="/public/img/voice.png" id="voice" class="chatbotButton"/></a>
 
+  <div class="button-group">
+    <button class="button button-default r-search" type="submit" id="searchButton" >
+      Recipe Search
+    </button>
+  </div>
+</form>
 
 
-<!-- this part needs to be changed but it works for now -->
-<button id="button" style="margin-left:300px; margin-top:0%;"><img src="public/img/camera.png" class="camera"></button>
+<div style="margin-top:-10%; margin-left:50%;">
+  <button class="button button-default r-search" id="button" >
+    <img src="public/img/camera.png" class="camera">
+  </button>
+</div>
 <div id="overlay"></div>
 <div id="popup">
   <div class="popupcontrols">
@@ -109,30 +57,6 @@
   </div>
 </div>
 
-<!-- <div class="container">
-<div class="row">
-<div class="span6">
-<form class="form" method="post" action="/App/HandleUpload" enctype="multipart/form-data">
-<p>
-<label for="pic"><strong>Picture*:</strong></label>
-<input type="file" name="pic" id="pic" class="span6">
-</p>
-<hr>
-<input type="submit" value="Upload" class="btn btn-large btn-success">
-</form>
-</div>
-<div class="span6">
-<i>
-Your picture is expected to be in PNG or JPEG format.
-Minimum allowed resolution is 150x150px.
-Maximum file size is 2 MB.
-</i>
-</div>
-</div>
-</div> -->
-
-<!-- this part needs to be changed but it works for now -->
-
 <script src="/public/js/index.js"></script>
 
 </main>
@@ -150,8 +74,6 @@ Maximum file size is 2 MB.
   </ul>
 </div>
 
-
-<!-- </div> -->
 
 </body>
 
