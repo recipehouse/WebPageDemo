@@ -191,14 +191,14 @@ main.home .button-group {
 
 #overlay {
   display: none;
-  position: absolute;
+  /* position: absolute;
   top: 0;
   bottom: 0;
   background: #999;
   width: 50%;
   height: 50%;
   opacity: 0.8;
-  z-index: 100;
+  z-index: 100; */
 }
 
 #popup {
@@ -206,20 +206,29 @@ main.home .button-group {
   position: absolute;
   top: 50%;
   left: 50%;
-  background: #fff;
   width: 300px;
-  height: 300px;
-  margin-left: -300px;
-  margin-top: -250px;
+  height: 150px;
+  margin-left: -160px;
+  margin-top: 200px;
   z-index: 200;
   border: blue;
   border-width: 10px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 #popupclose {
   float: right;
   padding: 10px;
   cursor: pointer;
+  repeat 0px 0px;
+  width:35px;
+  height: 35px;
+  display: block;
+  position:absolute;
+  top:8px;
+  right:10px;
+  cursor:pointer;
 }
 
 .popupcontent {

@@ -1,27 +1,11 @@
 {{set . "title" "Home"}}
 {{template "header.html" .}}
 
-<!-- <header class="jumbotron" style="background-color:#A9F16C">
-<div class="container">
-<div class="row">
-<h1>{{.greeting}}</h1>
-<p></p>
-</div>
-</div>
-</header> -->
-
 <header>
-  <!-- <div class="container">
-  <div class="row">
-  <h1>{{.greeting}}</h1>
-  <p></p>
-</div>
-</div> -->
+
 </header>
 
 <body>
-
-  <!-- <div class="fluid-container"> -->
 
   <div class="toolbar">
     <ul>
@@ -89,7 +73,6 @@
 
 
 
-<!-- this part needs to be changed but it works for now -->
 <button id="button" style="margin-left:300px; margin-top:0%;"><img src="public/img/camera.png" class="camera"></button>
 <div id="overlay"></div>
 <div id="popup">
@@ -109,29 +92,27 @@
   </div>
 </div>
 
-<!-- <div class="container">
-<div class="row">
-<div class="span6">
-<form class="form" method="post" action="/App/HandleUpload" enctype="multipart/form-data">
-<p>
-<label for="pic"><strong>Picture*:</strong></label>
-<input type="file" name="pic" id="pic" class="span6">
-</p>
-<hr>
-<input type="submit" value="Upload" class="btn btn-large btn-success">
-</form>
-</div>
-<div class="span6">
-<i>
-Your picture is expected to be in PNG or JPEG format.
-Minimum allowed resolution is 150x150px.
-Maximum file size is 2 MB.
-</i>
-</div>
-</div>
-</div> -->
+<i><button class="tc"><img src="resource/camera.png" class="camera"></button></i>
+<div id="gray"></div>
+		<div class="popup" id="popup">
+			<div class="top_nav" id='top_nav'>
+				<div align="center">
+					<span>Images Upload</span>
+					<div class="popupcontrols">
+    <span id="popupclose">X</span>
+  </div>
+				</div>
+			</div>
+			<form class="form" method="post" action="/App/HandleUpload" enctype="multipart/form-data">
+      <p>
+        <label for="pic"><strong>Picture*:</strong></label>
+        <input type="file" name="pic" id="pic" class="span6">
+      </p>
+      <hr>
+      <input type="submit" value="Upload" class="btn btn-large btn-success">
+    </form>
+		</div>
 
-<!-- this part needs to be changed but it works for now -->
 
 <script src="/public/js/index.js"></script>
 
@@ -150,8 +131,6 @@ Maximum file size is 2 MB.
   </ul>
 </div>
 
-
-<!-- </div> -->
 
 </body>
 
