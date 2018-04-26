@@ -34,6 +34,8 @@ first make sure golang is installed currectly <br>
 #### Install dependencies
 
 Install dependencies by execute the following command sequencially
+##### Note
+Git has to be installed to allow go get running properly
 
 `go get -u github.com/levigross/grequests` <br>
 `go get -u github.com/labstack/echo/...` <br>
