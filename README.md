@@ -10,56 +10,67 @@ This web interface using revel framework to achieve that functionalities
 
 This instruction is based on CentOS 7
 
-## Denpendencies
+### Install Go
+
+first make sure golang is installed currectly <br>
+
+1. Install by executing `sudo yum install go`
+2. Check if go is ready by executing `go version`
+
+### Set the GOPATH
+
+1. Make a directory: mkdir ~/gocode
+2. Tell Go to use that as your GOPATH: export GOPATH=~/gocode
+
+
+### Install Denpendencies
+
+#### Denpendencies
 
 	- grequests
 	- echo
 	- revel
 
+#### Install dependencies
 
-first make sure golang is installed currectly
-to install golang, execute `sudo yum install go`
-to check if go is ready, execute `go version`
+Install dependencies by execute the following command sequencially
 
-set the GOPATH correctly by execute `export GOPATH=/home/<your username>/gocode`
+`go get -u github.com/levigross/grequests` <br>
+`go get -u github.com/labstack/echo/...` <br>
+`go get github.com/revel/revel` <br>
+`go get github.com/revel/cmd/revel` <br>
 
-then get the dependencies by execute the following command sequencially
+## Add GOPATH/bin to PATH
 
-
-`go get -u github.com/levigross/grequests`
-
-`go get -u github.com/labstack/echo/...`
-
-`go get github.com/revel/revel`
-
-`go get github.com/revel/cmd/revel`
+- `export PATH="$PATH:$GOPATH/bin"`
 
 ## Compile the api
 
 recipehouse api can be compiled by first change the directory to the folder that contains api source code
 <br>
 
-then execute `go build main.go`
-<br>
+1. `cd ~/recipehouse`
+2. `go build main.go` <br>
 
 and then execute that generated binary file in BACKGROUND
 
+3. `./main`
+
 ## Compile the webdemo
 
-first need to install revel correctly
+1. Check if revel is installed correctly by executing
 <br>
+`revel version`
 
-then put the whole folder which contains the webdemo source code in GOAPTH/src file
+2. then put the whole folder which contains the webdemo source code in GOAPTH/src file
 <br>
+`mv webdemo $GOPATH/src`
 
-then execute `export PATH="$PATH:$GOPATH/bin"`
+3. and change the directory to the folder that contains webdemo source code in GOPATH/src
 <br>
+`cd $GOPATH/src/webdemo`
 
-and change the directory to the folder that contains webdemo source code in GOPATH/src
-<br>
-
-then execute `revel run`
-<br>
+4. then execute `revel run`
 
 and now you should have access to recipehouse service via browser : `127.0.0.1:9000`
 
