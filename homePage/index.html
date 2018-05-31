@@ -14,8 +14,10 @@
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic' rel='stylesheet' type='text/css'>
 
 
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-		<link href="css/component.css" rel='stylesheet' type='text/css' />
+
+	<!--Custom-Theme-files-->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />	
+		<link href="css/component.css" rel='stylesheet' type='text/css' />	
 		<link href="css/nav.css" rel='stylesheet' type='text/css' />
 
 	<script src="js/jquery.min.js"> </script>
@@ -28,7 +30,7 @@
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){
+				$(".scroll").click(function(event){		
 					event.preventDefault();
 					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
 				});
@@ -118,11 +120,11 @@
 									<h3>Cam<span>era</span></h3>
 									<p>Use images for searching.</p>
 									<a href="#">View more</a>
-								</figcaption>
+								</figcaption>			
 							</figure>
-
+							
 						</div>
-						<div class="bnr-btm-right">
+						<div class="bnr-btm-right">				
 							<h3>Image recognition</h3>
 							<p></p>
 							<a href="http://webdemo.recipehouse.tk" class="buy btn-wayra">Find your recipe</a>
@@ -132,7 +134,7 @@
 
 					<!--voice-->
 					 <div class="top_section two">
-					 	<div class="bnr-btm-right two">
+					 	<div class="bnr-btm-right two">				
 							<h3>Text search</h3>
 							<p></p>
 							<a href="http://webdemo.recipehouse.tk" class="buy btn-wayra">Find your recipe</a>
@@ -144,11 +146,11 @@
 									<h3>Let<span>ters</span></h3>
 									<p>Available for normal searching.</p>
 									<a href="#">View more</a>
-								</figcaption>
+								</figcaption>			
 							</figure>
-
+							
 						</div>
-
+					
 						<div class="clearfix"></div>
 					</div>
 
@@ -231,7 +233,8 @@
 
 				<h3>Find your best recipe</h3>
 				<p class="vd">This is the video about our project.</p>
-				<a href="#" data-toggle="modal" data-target="#myModal2" class="play" href="#"><i class="glyphicon glyphicon-play-circle"> </i></a>
+				<a href="#video" data-toggle="modal" data-target="#myModal2" class="play" href="#video"><i class="glyphicon glyphicon-play-circle"> </i></a>
+
 			</div>
 
 
@@ -242,6 +245,8 @@
 				<div class="modal-content about">
 					<div class="modal-header">
 						<button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<video src="recipe house video.mp4" width="750" height="750" controls="controls">video</video>
+
 					</div>
 					<div class="modal-body about">
 
@@ -305,7 +310,7 @@
 							<h4>Recipe House Logo</h4>
 							<p> Our logo designed by YantingSHEN, not available on other place.</p>
 						</figcaption>
-					</a>
+					</a>						
 				</figure>
 			</div>
 			<div class="col-md-4 grid slideanim wow fadeInUp animated animated animated" data-wow-delay=".5s">
@@ -316,8 +321,8 @@
 						<figcaption>
 							<h4>Recipe House APP Design</h4>
 							<p> It's Recipe House excepted APP design for our future plan.</p>
-						</figcaption>
-						</a>
+						</figcaption>	
+						</a>						
 				</figure>
 			</div>
 			<div class="col-md-4 grid slideanim wow fadeInRight animated animated" data-wow-delay=".5s">
@@ -329,10 +334,10 @@
 							<h4>APP Design expectation</h4>
 						<p> Test with Huawei Phone</p>
 						</figcaption>
-					</a>
+					</a>						
 				</figure>
 			</div>
-
+			
 			<div class="clearfix"></div>
 		 </div>
 		  <div class="portfolio-top">
@@ -516,21 +521,22 @@
 				 <h3 class="tittle wow fadeInUp animated animated" data-wow-delay=".5s">Contact Us</h3>
 					<div class="col-md-6 contact-in wow slideInUp animated animated" data-wow-delay=".5s">
 						<div class="more-address wow slideInUp animated animated" data-wow-delay=".5s">
-								<address>
-								  <strong class="one">Address</strong><br>
-									Computer Science building<br>
-									Wollaton Rd, Nottingham 94107<br>
-									NG8 1BB<br>
-								  <abbr title="Phone">Phone :</abbr> 0115 951 4251 (department phone)
-								</address>
+
 								<address>
 								  <strong class="one">Our mails</strong><br>
-								  <a href="askmryang@outlook.com">askmryang@outlook.com (Junsong)</a> <br>
-									<a href="james59427@gmail.com">james59427@gmail.com (Chaoqun)</a> <br>
-									<a href="luouwen97@gmail.com">luouwen97@gmail.com (Luou)</a> <br>
-									<a href="syt545676986@gmail.com">syt545676986@gmail.com (Yanting)</a>
+									<h3><a href="askmryang@outlook.com">askmryang@outlook.com </a>(Junsong)</h3>
+									<h3><a href="james59427@gmail.com">james59427@gmail.com </a>(Chaoqun)</h3>
+									<h3><a href="luouwen97@gmail.com">luouwen97@gmail.com </a>(Luou)</h3>
+										<h3><a href="syt545676986@gmail.com">syt545676986@gmail.com </a>(Yanting)</h3>
 
 							   </address>
+							<address>
+								<strong class="one">Address</strong><br>
+								Computer Science building<br>
+								Wollaton Rd, Nottingham 94107<br>
+								NG8 1BB<br>
+								<abbr title="Phone">Phone :</abbr> 0115 951 4251 (department phone)
+							</address>
 						  </div>
 					</div>
 
